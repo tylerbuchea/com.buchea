@@ -6,27 +6,214 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>Buchea.com</title>
+        <meta name="description" content="The home of the Buchea Family.">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
+        <style>
+
+        /** Html **/
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url('buchea.com-assets/satinweave.png');
+            color: #3b3b3b;
+            font-family: helvetica;
+            font-size: 1rem;
+        }
+
+        @font-face {
+          font-family: 'FontAwesome';
+          src: url('./buchea.com-assets/font/fontawesome-webfont.eot?v=3.2.1');
+          src: url('./buchea.com-assets/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('./buchea.com-assets/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('./buchea.com-assets/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('./buchea.com-assets/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+          font-weight: normal;
+          font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        i {
+            cursor: pointer;
+            display: table-cell;
+            font-family: 'FontAwesome';
+            font-size: 3rem;
+            font-style: normal;
+        }
+
+        i.gplus:before {
+            color: red;
+            content: '\f0d4';
+        }
+
+        i.twitter:before {
+            color: lightblue;
+            content: '\f081';
+        }
+
+        i.linkedin:before {
+            color: blue;
+            content: '\f0e1';
+        }
+
+        i.github:before {
+            color: gray;
+            content: '\f092';
+        }
+
+        i.fb:before {
+            color: blue;
+            content: '\f09a';
+        }
+
+        /** Container **/
+        .container {
+            margin: 50px auto;
+            max-width: 700px;
+            width: 100%;
+        }
+
+            /** Buchea **/
+            .buchea {
+                background: #fff;
+                border: 1px solid #b3b3b3;
+                border-radius: 5px;
+                border-spacing: 25px;
+                box-shadow: 0px 5px 15px #666;
+                display: table;
+                height: 200px;
+                margin: 20px auto;
+                width: 100%;
+            }
+
+
+                /** Avatar **/
+                .buchea .avatar {
+                    display: table-cell;
+                    height: 100%;
+                    width: 100px;
+                }
+
+                    .buchea .photo {
+                        background: #fff;
+                        border: 3px solid #3b3b3b;
+                        border-radius: 50%;
+                        height: 100px;
+                        width: 100px;
+                    }
+
+                    .buchea .name {
+                        font-size: 1.25rem;
+                        text-align: center;
+                    }
+
+                /** Links **/
+                .buchea .links {
+                    border-radius: 5px;
+                    display: table-cell;
+                    padding: 10px;
+                    width: 100%;
+                }
+
+                    .buchea .links a {                        
+                        float: left;
+                        margin-bottom: 20px;
+                        width: 30.3%;
+                    }
+
+                    .buchea .links a i {
+                        float: right;
+                    }
+
+                /** Specific Buchea **/
+
+                .buchea.tyler .photo {
+                    background: url('./buchea.com-assets/tyler.jpg');
+                    background-size: cover;
+                }
+
+                .buchea.josh .photo {
+                    background: url('./buchea.com-assets/josh.jpg');
+                    background-size: cover;
+                }
+
+                .buchea.brett .photo {
+                    background: url('./buchea.com-assets/brett.jpg');
+                    background-size: cover;
+                }
+
+        /** Media Queries **/
+        @media screen and (max-width: 700px) {
+            
+            .buchea {
+                border-left: 0;
+                border-right: 0;
+                border-radius: 0;
+                border-spacing: 15px;
+            }
+
+        }
+
+        </style>
     </head>
     <body>
+
+        <!-- Container -->
         <div class="container">
-            <div class="hero-unit">
-                <h1>'Allo, 'Allo!</h1>
-                <p>You now have</p>
-                <ul>
-                    <li>HTML5 Boilerplate</li>
-                    <li>Twitter Bootstrap</li>
-                </ul>
-                <p>installed.</p>
-                <h3>Enjoy coding! - Yeoman</h3>
+
+            <!-- Tyler Buchea -->
+            <div class="buchea tyler">
+
+                <div class="avatar">
+                    <div class="photo"></div>
+                    <div class="name">Tyler Buchea</div>
+                </div>               
+
+                <div class="links">
+                    <a href="" target="_blank"><i class="github"></i></a>
+                    <a href="" target="_blank"><i class="gplus"></i></a>
+                    <a href="" target="_blank"><i class="twitter"></i></a>
+                </div>
+
             </div>
+
+            <!-- Josh Buchea -->
+            <div class="buchea josh">
+
+                 <div class="avatar">
+                    <div class="photo"></div>
+                    <div class="name">Josh Buchea</div>
+                </div>               
+
+                <div class="links">
+                    <a href="" target="_blank"><i class="fb"></i></a>
+                    <a href="" target="_blank"><i class="gplus"></i></a>
+                    <a href="" target="_blank"><i class="twitter"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Brett Buchea -->
+            <div class="buchea brett">
+
+                <div class="avatar">
+                    <div class="photo"></div>
+                    <div class="name">Brett Buchea</div>
+                </div>               
+
+                <div class="links">
+                    <a href="" target="_blank"><i class="linkedin"></i></a>
+                    <a href="" target="_blank"><i class="gplus"></i></a>
+                    <a href="" target="_blank"><i class="twitter"></i></a>
+                </div>
+
+            </div>
+
         </div>
 
         <!--[if lt IE 7]>
@@ -41,13 +228,43 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <!-- build:js scripts/main.js -->
-        <script src="components/jquery/jquery.js"></script>
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+        <script>
 
-        <!-- build:js(.tmp) scripts/coffee.js -->
-        <script src="scripts/hello.js"></script>
-        <!-- endbuild -->
+        /** Namespace **/
+        var App = function() {
+
+            // BQuery ;-)
+            var $ = function(selector) {
+                return document.querySelector(selector);
+            };
+
+            // Random Number
+            var randNum = function(range) {
+                return Math.round(Math.random() * (range.max - range.min) + range.min);
+            };
+
+            // Organize Profiles
+            var organizeProfiles = function(seed) {
+                var theList = $('.container');
+                var randomBuchea = $('.buchea:nth-child('+seed+')');
+
+                theList.insertBefore(randomBuchea, theList.firstChild);
+            };
+
+            // Init
+            this.init = function() {
+
+                organizeProfiles( randNum({min: 1, max: 3}) );
+
+            };
+
+        };
+
+        /** Initialize **/
+        var app = new App();
+        app.init();
+
+        </script>
+
 </body>
 </html>

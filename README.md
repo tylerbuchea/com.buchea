@@ -1,1 +1,1 @@
-*Buchea.com
+Buchea.com

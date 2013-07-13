@@ -3,3 +3,6 @@ dist
 .tmp
 .sass-cache
 app/components
+app/attic
+buchea.com.sublime-project
+buchea.com.sublime-workspace
