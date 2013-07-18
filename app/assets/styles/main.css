@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('images/satinweave.png');
+    background: url('../images/satinweave.png');
     color: #3b3b3b;
     font-family: helvetica;
     font-size: 1rem;
@@ -15,11 +15,11 @@ body {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('font/fontello.eot');
-  src: url('font/fontello.eot') format('embedded-opentype'), 
-    url('font/fontello.woff') format('woff'), 
-    url('font/fontello.ttf') format('truetype'), 
-    url('font/fontello.svg') format('svg');
+  src: url('fonts/fontello.eot');
+  src: url('fonts/fontello.eot') format('embedded-opentype'), 
+    url('fonts/fontello.woff') format('woff'), 
+    url('fonts/fontello.ttf') format('truetype'), 
+    url('fonts/fontello.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -149,17 +149,17 @@ header {
         /** Specific Buchea **/
 
         .buchea.tyler .photo {
-            background: url('images/tyler.jpg');
+            background: url('../images/tyler.jpg');
             background-size: cover;
         }
 
         .buchea.josh .photo {
-            background: url('images/josh.jpg');
+            background: url('../images/josh.png');
             background-size: cover;
         }
 
         .buchea.brett .photo {
-            background: url('images/brett.jpg');
+            background: url('../images/brett.jpg');
             background-size: cover;
         }
 
