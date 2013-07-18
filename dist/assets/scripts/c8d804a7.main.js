@@ -1,0 +1,1 @@
+var App=function(){var a=function(a){return document.querySelector(a)},b=function(a){return Math.round(Math.random()*(a.max-a.min)+a.min)},c=function(b){var c=a(".container"),d=a(".buchea:nth-child("+b+")");c.insertBefore(d,c.firstChild)};this.init=function(){c(b({min:1,max:3}))}},app=new App;app.init();
