@@ -149,17 +149,14 @@ header {
 
         .buchea.tyler .photo {
             background: url('../images/tyler.jpg');
-            background-size: cover;
         }
 
         .buchea.josh .photo {
-            background: url('../images/josh.png');
-            background-size: cover;
+            background: url('../images/josh.jpg');
         }
 
         .buchea.brett .photo {
             background: url('../images/brett.jpg');
-            background-size: cover;
         }
 
 #disqus_thread {
