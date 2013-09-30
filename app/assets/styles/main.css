@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('../images/satinweave.png');
+    background: #eee;
     color: #3b3b3b;
     font-family: helvetica;
     font-size: 1rem;
@@ -29,16 +29,18 @@ a {
     color: #3b3b3b;
 }
 
+ul {
+    list-style: none;
+}
+
 i {
     border: 3px solid #ddd;
     border-radius: 50%;
     display: table-cell;
     font-family: 'FontAwesome';
-    font-size: 3.0rem;
+    font-size: 1.25rem;
     font-style: normal;            
-    height: 70px;
-    padding: 10px;
-    width: 70px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -62,22 +64,11 @@ i.github:before {
     content: '\e802';
 }
 
-.selectable:hover {
-    border-color: #666 !important;
-}
-
-.selectable:active {
-    bottom: 0;
-    box-shadow: none;
-    left: 0;
-    position: relative;
-}
-
 /** Header **/
 header {
     margin: 20px auto;
-    max-width: 700px;
-    padding: 10px 15px;
+    max-width: 500px;
+    padding: 10px;
     width: 100%;
 }
 
@@ -87,88 +78,81 @@ header {
     width: 100%;
 }
 
-    /** Buchea Wrapper **/
-    .buchea-wrapper {
+    /** Row **/
+    .row {
         background: #fff;
         width: 100%;
     }
     
-    .buchea-wrapper:nth-child(even) {
+    .row:nth-child(even) {
         background: transparent;
     }
 
-    /** Buchea **/
-    .buchea {
-        border-radius: 5px;
-        border-spacing: 15px;
-        display: table;
-        margin: 0 auto;
-        max-width: 700px;
-        width: 100%;
-    }
-
-        /** Avatar **/
-        .buchea .avatar {
-            display: table-cell;
-            height: 100%;
-            width: 100px;
-        }
-
-            .buchea .photo {
-                background: #fff;
-                border: 3px solid #3b3b3b;
-                border-radius: 50%;
-                height: 100px;
-                width: 100px;
-            }
-
-            .buchea .name {
-                font-size: 1.25rem;
-                text-align: center;
-            }
-
-        /** Links **/
-        .buchea .links {
-            border-spacing: 0;
-            display: table;
+        /** Buchea **/
+        .buchea {
+            margin: 0 auto;
+            max-width: 500px;
+            overflow: hidden;
             padding: 10px;
             width: 100%;
         }
 
-            .buchea .links div {
-                display: table-cell;
+            /** Avatar **/
+            .buchea .avatar {
+                float: left;
+                height: 100%;
+                margin-right: 10px;
+                width: 100px;
             }
 
-            .buchea .links a {
-                border-radius: 50%;
-                float: right;
+                .buchea .photo {
+                    background: #fff;
+                    border: 3px solid #3b3b3b;
+                    border-radius: 50%;
+                    height: 100px;
+                    width: 100px;
+                }
+
+                .buchea .name {
+                    text-align: center;
+                    font-size: 1.25rem;
+                }
+
+            /** Links **/
+            .buchea .links {
+                float: left;
+                max-width: 300px;
+                margin: auto;
+                overflow: hidden;
+                padding: 10px 0 0 0;
+                width: 100%;
             }
 
-        /** Specific Buchea **/
+                .buchea .links li {
+                    float: left;
+                    margin: 10px 10px 0 10px;
+                }
 
-        .buchea.tyler .photo {
-            background: url('../images/tyler.jpg');
-        }
+                .buchea .links a {
+                    border-radius: 50%;
+                }
 
-        .buchea.josh .photo {
-            background: url('../images/josh.jpg');
-        }
+            /** Specific Buchea **/
+            .buchea.tyler .photo {
+                background: url('../images/tyler.jpg');
+            }
 
-        .buchea.brett .photo {
-            background: url('../images/brett.jpg');
-        }
+            .buchea.josh .photo {
+                background: url('../images/josh.jpg');
+            }
+
+            .buchea.brett .photo {
+                background: url('../images/brett.jpg');
+            }
 
 /** Media Queries **/
 @media screen and (max-width: 400px) {
-    
-    .buchea {
-        border-spacing: 5px;
-    }
 
-    i {
-        font-size: 2.0rem;
-        height: 50px;
-        width: 50px;
-    }
+    
 
 }
