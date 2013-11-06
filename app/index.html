@@ -17,7 +17,7 @@
 
         <!-- Header -->
         <header>
-            <a href="http://www.buchea.com">
+            <a href="http://www.buchea.com" class="title">
                 <h1 class="title">Buchea.com</h1>
                 <em>Home of the Buchea Family</em>
             </a>
@@ -33,7 +33,7 @@
 
                     <div class="avatar">
                         <a href="http://tylerbuchea.com" target="_blank">
-                            <div class="photo" onmouseover="app.animate(this, 'pulse')"></div>
+                            <div class="photo"></div>
                             <div class="name">Tyler Buchea</div>
                         </a>
                     </div>               
@@ -42,19 +42,19 @@
 
                         <li>
                             <a href="https://github.com/tylerbuchea" target="_blank">
-                                <i class="github" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="github"></i>
                             </a>
                         </li>
 
                         <li>
                             <a href="https://plus.google.com/115309649913679483813" target="_blank">
-                                <i class="gplus" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="gplus"></i>
                             </a>
                         </li>
 
                         <li>
                             <a href="https://twitter.com/tylerbuchea" target="_blank">
-                                <i class="twitter" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="twitter"></i>
                             </a>
                         </li>
 
@@ -71,7 +71,7 @@
 
                      <div class="avatar">
                         <a href="http://joshbuchea.com" target="_blank">
-                            <div class="photo" onmouseover="app.animate(this, 'pulse')"></div>
+                            <div class="photo"></div>
                             <div class="name">Josh Buchea</div>
                         </a>
                     </div>               
@@ -80,19 +80,19 @@
 
                         <li>
                             <a href="https://twitter.com/joshbuchea" target="_blank">
-                                <i class="twitter" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="twitter"></i>
                             </a>
                         </li>
 
                         <li>
                             <a href="https://github.com/joshbuchea" target="_blank">
-                                <i class="github" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="github"></i>
                             </a>
                         </li>
 
                         <li>
                             <a href="http://www.linkedin.com/profile/view?id=178764904" target="_blank">
-                                <i class="linkedin" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="linkedin"></i>
                             </a>
                         </li>
 
@@ -109,7 +109,7 @@
 
                     <div class="avatar">
                         <a href="http://brettbuchea.com" target="_blank">
-                            <div class="photo" onmouseover="app.animate(this, 'pulse')"></div>
+                            <div class="photo"></div>
                             <div class="name">Brett Buchea</div>
                         </a>
                     </div>               
@@ -117,17 +117,17 @@
                     <ul class="links">
                         <li>
                             <a href="http://www.linkedin.com/profile/view?id=81112595" target="_blank">
-                                <i class="linkedin" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="linkedin"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://plus.google.com/103592967319876490037" target="_blank">
-                                <i class="gplus" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="gplus"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://twitter.com/brettbuchea" target="_blank">
-                                <i class="twitter" onmouseover="app.animate(this, 'pulse')"></i>
+                                <i class="twitter"></i>
                             </a>
                         </li>
 
@@ -157,7 +157,7 @@
                 var $ = function(selector) {
                     return document.querySelector(selector);
                 }, $$ = function(selector) {
-                    return document.querySelectAll(selector);
+                    return document.querySelectorAll(selector);
                 };
 
                 // Random Number
@@ -167,19 +167,35 @@
 
                 // Organize Profiles
                 var organizeProfiles = function(seed) {
-                    var theList = $('.container');
+                    var nodeList = $('.container');
                     var randomBuchea = $('.row:nth-child('+seed+')');
 
-                    theList.insertBefore(randomBuchea, theList.firstChild);
+                    nodeList.insertBefore(randomBuchea, nodeList.firstChild);
                 };
 
                 // Init
                 this.init = function() {
+                    // randomly arrange profiles
                     organizeProfiles( randNum({min: 1, max: 3}) );
+
+                    // assign events
+                    var nodeList = [];
+                    nodeList = nodeList.concat( $$('.title') );
+                    nodeList = nodeList.concat( $$('.photo') );
+                    nodeList = nodeList.concat( $$('i') );
+
+                    for(var i=0; i<nodeList.length; i++) {
+                        var node = nodeList[i];
+                        for(var j=0; j<node.length; j++) {
+                            node[j].onmouseover = function() { 
+                                app.animate(this, 'pulse') 
+                            };
+                        }
+                    }                    
                 };
 
                 // UI Animations
-                this.animate = function(el, klassName) {                    
+                this.animate = function(el, klassName) {                
                     var regExpKlass = new RegExp("\\b" + ' animated ' + klassName + "\\b");
                     var removeAnimation = function() {
                         el.className = el.className.replace(regExpKlass,'');
